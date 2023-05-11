@@ -1,0 +1,39 @@
+.avatar_user {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.avatar_user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.avatar_user button {
+  border: none;
+  padding: 0;
+}
+.over_avatar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.over_avatar svg {
+  width: 10px;
+  height: 10px;
+}
+
+/* menu header */
+.menu_header a {
+  display: block;
+  padding: 6px 12px;
+  width: 120px;
+}
+.menu_header ul {
+  padding: 0;
+  margin: 0;
+}
+.menu_header li {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,109 @@
+.content_stream{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+    width: 100%;
+}
+.content_stream .view__assign{
+    min-height: 180px;
+    border: 1px solid rgb(194, 192, 192);
+    margin-block-end: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+.content_stream .view__assign .notifi__deadline{
+    text-align: left;
+    padding: 20px;
+    
+}
+.content_stream .view__assign .notifi__deadline p{
+    margin: 0;
+    font-weight: 500;
+    color: rgb(118, 116, 116);
+}
+.content_stream .view__assign .view__deail{
+    margin-top: 10px;
+    text-align: right;
+    padding: 14px 0;
+}
+.content_stream .view__assign .view__deail a{
+    font-size: 16px;
+    color: black;
+    font-weight: 300;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 10px 10px;
+    transition: all .5s;
+}
+.content_stream .view__assign .view__deail a:hover{
+    background-color: rgb(118, 116, 116);
+    color: white;
+}
+
+.content_stream .content__work{
+    margin-block-end: auto;
+    flex: 1;
+}
+.content__work img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.content__work .my_post , .assign_to_me{
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgb(76, 75, 75);
+}
+.content__work .my_post{
+    padding: 20px 30px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.my_post span{
+    color: rgb(194, 192, 192);
+}
+.my_post span:hover{
+    color: black;
+}
+.content__work .assign_to_me {
+    border: 1px solid  rgb(194, 192, 192);
+}
+.content__work .assign_to_me:hover{
+    background-color: rgb(182, 179, 179);
+}
+.content__work .assign_to_me .title_assign{
+    color: black;
+    padding: 20px 30px;
+    align-items: center;
+    margin-block-start: auto;
+    gap: 24px;
+    border-bottom: 1px solid rgb(194, 192, 192);
+}
+.title_assign .title_text{
+    font-weight: 700;
+}
+.title_assign p{
+    margin: 0;
+    padding: 0;
+}
+.title_assign img{
+    margin-block-end: auto;
+}
+.title_assign .time_assign{
+    text-align: left;
+}
+.assign_to_me .comment__assign{
+    text-align: left;
+    padding: 10px 30px;
+    font-weight: 400;
+}
+.assign_to_me .comment__assign .number_coment{
+    margin-right: 5px;
+}

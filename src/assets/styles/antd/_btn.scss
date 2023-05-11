@@ -1,0 +1,43 @@
+.ant-btn {
+  padding-left: 24px;
+  padding-right: 24px;
+  line-height: 1;
+}
+
+.ant-btn-primary {
+  &:hover,
+  &:focus {
+    border-color: var(--hover-primary);
+    background: var(--hover-primary);
+  }
+
+  .anticon-loading {
+    color: var(--white);
+  }
+}
+
+.ant-btn-secondary {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--white);
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover-primary);
+    color: var(--hover-primary);
+    background: var(--white);
+  }
+}
+
+.ant-btn-default {
+  border-color: var(--primary);
+  color: var(--color-primary);
+  background: var(--white);
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover-primary);
+    color: var(--hover-primary);
+    background: var(--white);
+  }
+}

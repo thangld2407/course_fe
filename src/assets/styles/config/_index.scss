@@ -1,0 +1,20 @@
+@import "./variables";
+@import "./reset";
+
+:root {
+  --font-size-base: #{$font-size-base};
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-text: #{$color-text};
+  --color-error: #{$color-error};
+  --color-info: #{$color-info};
+
+  --white: #fff;
+  --black: #000;
+  --hover-primary: #{$color-primary};
+}
+
+.pointer {
+  cursor: pointer;
+}
+

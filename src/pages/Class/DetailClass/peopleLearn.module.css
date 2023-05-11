@@ -1,0 +1,43 @@
+.people_content{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.teacher h4, .list__sutudent .student__item{
+    font-size: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    padding-left: 20px;
+}
+.table__teacher , .table__student{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.table__teacher h5, .table__student h5{
+    font-size: 14px;
+    font-weight: 500;
+}
+.table__teacher img, .table__student img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.list__sutudent{
+    margin-top: 80px;
+}
+
+.list__sutudent .student__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list__sutudent .student__item h4{
+    margin: 0;
+}
+.list__sutudent .student__item span{
+    font-size: 14px;
+    
+}
