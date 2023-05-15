@@ -1,12 +1,13 @@
 import classNames from "classnames/bind";
 import style from "./profile.module.css";
 import { useEffect, useState } from "react";
-import { getRequest, postRequest } from "@/api/request";
-import { Form, Input, notification } from "antd";
+import { getRequest, postFormData, postRequest } from "@/api/request";
+import { Avatar, Button, Form, Input, notification } from "antd";
 let cx = classNames.bind(style);
 
 function Profile() {
   const [dataProfile, setDataProfile] = useState({});
+  const [avatar, setAvatar] = useState(null);
 
   const [form] = Form.useForm();
   async function fetchDataProfile() {
@@ -61,6 +62,16 @@ function Profile() {
           });
         }
       }
+      const formData = new FormData();
+      let file = document.getElementById("avatarFile").files[0];
+      if (file) {
+        formData.append("attachment", file);
+        const response_upload = await postFormData("/upload", formData);
+        if (response_upload.status_code === 200) {
+          data_send.avatar = response_upload.data;
+        }
+      }
+
       const response = await postRequest("/auth/change-profile", data_send);
       if (response.status_code === 200) {
         notification.success({
@@ -82,6 +93,10 @@ function Profile() {
     }
   }
 
+  const handleChangeAvatar = () => {
+    document.getElementById("avatarFile").click();
+  };
+
   useEffect(() => {
     fetchDataProfile();
   }, []);
@@ -100,6 +115,25 @@ function Profile() {
               )}
             >
               <h4 className={cx("text-right")}>Profile Settings</h4>
+            </div>
+            <div className="row text-center mb-2">
+              <input
+                type="file"
+                hidden
+                name=""
+                id="avatarFile"
+                onChange={(e) => {
+                  setAvatar(URL.createObjectURL(e.target.files[0]));
+                }}
+              />
+              <div className="col-md-12 mb-2">
+                <Avatar src={avatar || `http://localhost:7856${dataProfile.avatar}`} size={150} />
+              </div>
+              <div className="col-md-12">
+                <Button type="secondary" onClick={handleChangeAvatar}>
+                  Change Avatar
+                </Button>
+              </div>
             </div>
             <Form
               layout="vertical"
